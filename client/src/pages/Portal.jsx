@@ -8,7 +8,7 @@ function Portal() {
   const [error, setError] = useState('');
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/clients/portal/${slug}`)
+    axios.get(`https://freelance-portal-production.up.railway.app/api/clients/portal/${slug}`)
       .then(res => setClient(res.data))
       .catch(() => setError('Portal not found'));
   }, [slug]);

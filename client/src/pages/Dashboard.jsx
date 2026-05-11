@@ -14,14 +14,14 @@ function Dashboard() {
   useEffect(() => { fetchClients(); }, []);
 
   const fetchClients = async () => {
-    const res = await axios.get('http://localhost:5000/api/clients', {
+    const res = await axios.get('https://freelance-portal-production.up.railway.app/api/clients', {
       headers: { Authorization: `Bearer ${token}` }
     });
     setClients(res.data);
   };
 
   const createClient = async () => {
-    await axios.post('http://localhost:5000/api/clients', form, {
+    await axios.post('https://freelance-portal-production.up.railway.app/api/clients', form, {
       headers: { Authorization: `Bearer ${token}` }
     });
     setForm({ name: '', email: '', projectName: '' });
@@ -30,7 +30,7 @@ function Dashboard() {
   };
 
   const postUpdate = async () => {
-    await axios.post(`http://localhost:5000/api/clients/${selected._id}/updates`, { text: updateText }, {
+    await axios.post(`https://freelance-portal-production.up.railway.app/api/clients/${selected._id}/updates`, { text: updateText }, {
       headers: { Authorization: `Bearer ${token}` }
     });
     setUpdateText('');
@@ -38,7 +38,7 @@ function Dashboard() {
   };
 
   const copyPortalLink = (slug) => {
-    navigator.clipboard.writeText(`http://localhost:5173/portal/${slug}`);
+    navigator.clipboard.writeText(`https://freelance-portal-wine.vercel.app/portal/${slug}`);
     setCopied(slug);
     setTimeout(() => setCopied(null), 2000);
   };
