@@ -38,7 +38,7 @@ function Dashboard() {
   };
 
   const copyPortalLink = (slug) => {
-    navigator.clipboard.writeText(`https://freelance-portal-zqbr.onrender.com/portal/${slug}`);
+    navigator.clipboard.writeText(`https://freelance-portal-wine.vercel.app/portal/${slug}`);
     setCopied(slug);
     setTimeout(() => setCopied(null), 2000);
   };
