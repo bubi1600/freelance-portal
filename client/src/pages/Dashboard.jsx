@@ -14,7 +14,7 @@ function Dashboard() {
   useEffect(() => { fetchClients(); }, []);
 
   const fetchClients = async () => {
-    const res = await axios.get('https://freelance-portal-production.up.railway.app/api/clients', {
+    const res = await axios.get('https://freelance-portal-zqbr.onrender.com/api/clients', {
       headers: { Authorization: `Bearer ${token}` }
     });
     setClients(res.data);
