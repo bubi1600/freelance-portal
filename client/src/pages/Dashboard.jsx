@@ -21,7 +21,7 @@ function Dashboard() {
   };
 
   const createClient = async () => {
-    await axios.post('https://freelance-portal-production.up.railway.app/api/clients', form, {
+    await axios.post('https://freelance-portal-zqbr.onrender.com/api/clients', form, {
       headers: { Authorization: `Bearer ${token}` }
     });
     setForm({ name: '', email: '', projectName: '' });
@@ -30,7 +30,7 @@ function Dashboard() {
   };
 
   const postUpdate = async () => {
-    await axios.post(`https://freelance-portal-production.up.railway.app/api/clients/${selected._id}/updates`, { text: updateText }, {
+    await axios.post(`https://freelance-portal-zqbr.onrender.com/api/clients/${selected._id}/updates`, { text: updateText }, {
       headers: { Authorization: `Bearer ${token}` }
     });
     setUpdateText('');
@@ -38,7 +38,7 @@ function Dashboard() {
   };
 
   const copyPortalLink = (slug) => {
-    navigator.clipboard.writeText(`https://freelance-portal-wine.vercel.app/portal/${slug}`);
+    navigator.clipboard.writeText(`https://freelance-portal-zqbr.onrender.com/portal/${slug}`);
     setCopied(slug);
     setTimeout(() => setCopied(null), 2000);
   };

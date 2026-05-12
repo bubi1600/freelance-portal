@@ -8,7 +8,7 @@ function Login() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('https://freelance-portal-production.up.railway.app/api/auth/login', form);
+      const res = await axios.post('https://freelance-portal-zqbr.onrender.com/api/auth/login', form);
       localStorage.setItem('token', res.data.token);
       window.location.href = '/dashboard';
     } catch (err) {
